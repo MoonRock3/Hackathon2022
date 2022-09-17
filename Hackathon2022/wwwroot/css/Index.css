@@ -1,0 +1,45 @@
+.sidebar {
+    width: 100%; /* Ширина блока */
+	text-align: center;
+}
+
+.header{
+	text-align: center;
+	padding-bottom: 35px;
+	padding-top: 10px;
+}
+
+table{
+	text-align: center;
+}
+
+td{
+	padding: 50px;
+}
+
+
+.text{
+	padding: 30px;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 35px;
+	color: rgb(255, 255, 255);
+    background-color: rgb(40, 140, 228);
+	border-radius: 8px;
+}
+
+.text:hover{ /*цвет по наведению мыши*/
+	color: rgb(229, 240, 250);
+	background-color: rgb(25, 118, 210);
+	box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5); /*тень*/
+}
+
+.info1{
+	padding-top: 20px;
+	font-size: 18px;
+}
+
+.info2{
+	padding-top: 5px;
+	font-size: 18px;
+}
+

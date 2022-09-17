@@ -1,0 +1,51 @@
+﻿@page
+@model Hackathon2022.Pages.IndexModel
+@{
+}
+<html>
+
+<head>
+
+	<title>Электронная регистратура</title>
+	<link href="~/css/Index.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+	<div class="container">
+		<!--Подгружам стиль-->
+
+		<div class="header">
+			<img src="~/images/Index.png" width="120" height="150" alt="фоновая картинка" />
+		</div>
+		<div class="sidebar"> 
+
+			<table border="0" width="100%">
+			  <tr>
+				<td><a class="text" href="/components/record">Записаться на приём</a></td>
+			  </tr>
+			  <tr>
+				<td><a class="text" href="/components/ticket">Получить выписанный талон</a></td>
+			  </tr>
+			  <tr>
+				<td><a class="text" href="index.php?page=question">Только спросить</a></td>
+			  </tr>
+			</table>
+		
+			<div class="info1">Для записи к врачу подготовьте, пожалуйста, один из следующих документов:</div>
+			<div class="info2">Снилс</div>
+			<div class="info2">Медицинский полис нового образца</div>
+		</div>
+
+		<div class="content">
+
+		</div>
+
+		<!--footer-->
+
+	</div>
+
+</body>
+
+</html>
