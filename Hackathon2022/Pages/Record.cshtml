@@ -1,5 +1,5 @@
 ﻿@page
-@model Hackathon2022.Pages.components.record.IndexModel
+@model Hackathon2022.Pages.RecordModel
 @{
 }
 <html>
@@ -23,26 +23,27 @@
 	<div class="content">
 		<div class="item">
 			<div class="color"><img src="~/images/Record.png" alt="врач"/>
-				<a href="/Doctor">Невролог</a>
-				</div>
-				</div>
-		<div class="item">Аллерголог</div>
-		<div class="item">Бактериолог</div>
-		<div class="item">Гастроэнтеролог</div>
+				<a href="/Doctor/1">Невролог</a>
+			</div>
+		</div>
+		@for (int i = 1; i < 4; i++)
+		{
+			<div class="item">@Model.Specialties[i].Name</div>
+		}
 	</div>
 
 	<div class="content">
-		<div class="item">Кардиолог</div>
-		<div class="item">Косметолог</div>
-		<div class="item">ЛОР</div>
-		<div class="item">Нарколог</div>
+		@for (int i = 4; i < 8; i++)
+		{
+			<div class="item">@Model.Specialties[i].Name</div>
+		}
 	</div>
 
 	<div class="content">
-		<div class="item">Нейрохирург</div>
-		<div class="item">Окулист</div>
-		<div class="item">Ортопед</div>
-		<div class="item">Терапевт</div>
+		@for (int i = 8; i < 12; i++)
+		{
+			<div class="item">@Model.Specialties[i].Name</div>
+		}
 	</div>
 </div>
 <div class="footer"><a class="text" href="/Index">Вернуться назад</a></div>

@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id=1}"
 @model Hackathon2022.Pages.DoctorModel
 @{
 }
@@ -21,24 +21,34 @@
 
 <div class="content1">
 	<div class="content">
-		<div class="item"><a href="/Times"><img src="~/images/Surgeon.png" width="50px"/>Амосов</a></div>
-		<div class="item">Аничков</div>
-		<div class="item">Бакулев</div>
-		<div class="item">Бегельман</div>
+		<div class="item"><a href="/Times"><img src="~/images/Surgeon.png" width="50px"/>Амосов А.К.</a></div>
+		@for (var i = 1; i < 4; i++)
+		{
+			<div class="item">@Model.Doctors[i].SecondName 
+				@Model.Doctors[i].FirstName.Substring(0,1).ToUpper(). 
+				@Model.Doctors[i].MiddleName.Substring(0,1).ToUpper().
+			</div>
+		}
 	</div>
 
 	<div class="content">
-		<div class="item">Бехтерев</div>
-		<div class="item">Вирхов</div>
-		<div class="item">Гален</div>
-		<div class="item">Гурард</div>
+		@for (var i = 4; i < 8; i++)
+		{
+			<div class="item">@Model.Doctors[i].SecondName 
+				@Model.Doctors[i].FirstName.Substring(0,1).ToUpper(). 
+				@Model.Doctors[i].MiddleName.Substring(0,1).ToUpper().
+			</div>
+		}
 	</div>
 
 	<div class="content">
-		<div class="item">Даценко</div>
-		<div class="item">Ермолаева</div>
-		<div class="item">Миронова</div>
-		<div class="item">Тарасеева</div>
+		@for (var i = 8; i < 12; i++)
+		{
+			<div class="item">@Model.Doctors[i].SecondName 
+				@Model.Doctors[i].FirstName.Substring(0,1).ToUpper(). 
+				@Model.Doctors[i].MiddleName.Substring(0,1).ToUpper().
+			</div>
+		}
 	</div>
 </div>
 <div class="footer"><a class="text" href="/Record">Вернуться назад</a></div>
