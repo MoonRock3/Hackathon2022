@@ -1,0 +1,48 @@
+.header{
+    display: flex;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid dashed solid dashed;
+    border-color: #9c27b0 #f3e5f5 #9c27b0 #f3cff8;
+}
+
+.headerText{
+    padding-top: 70px;
+}
+
+.sidebar{
+    text-align: center;
+}
+
+body{
+    margin: 0%;
+}
+
+.strelka{
+    padding-top: 150px;
+}
+
+.footer{
+    padding-left: 20px;
+    padding-top: 60px;
+}
+
+.text{
+    padding: 10px;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+	color: #872099;
+    background-color: #f3cff8;
+	border-radius: 8px;
+}
+
+.text:hover{ /*цвет по наведению мыши*/
+	color: #872099;
+	background-color:  #f3cff8;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid dashed solid dashed;
+	box-shadow: 0.4em 0.4em 5px rgba(122,122,122,0.5); /*тень*/
+}
+
+h3{
+	color: red
+}

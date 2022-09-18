@@ -1,0 +1,56 @@
+﻿@page
+@model Hackathon2022.Pages.TimesModel
+@{
+}
+<html>
+	<head>
+		<title>Запись к специалисту</title>
+
+		<link href="~/css/Times.css" rel="stylesheet" type="text/css">
+		
+	</head>
+	<body>
+		<div class="container">
+<div class="header">
+	<img src="~/images/Index.png" width="80" height="100" alt="фоновая картинка" />
+	<div class="headerText">Медицинская информационно-аналитическая система</div>
+</div>
+<div class="sidebar"> 
+	<h1>Выберите дату и время</h1>
+</div>
+
+<div class="content1">
+	<div class="content">
+		<div class="item">
+			<a href="/Ticket"> 
+				<img src="~/images/Times/calendar.png" width="30px"/> 
+				20.09.22 (вт) 
+				<img src="~/images/Times/expired.png" width="30px"/> 15:00
+			</a>
+			</div>
+		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 23.09.22 (пт) <img src="~/images/Times/expired.png" width="30px"/> 09:30</div>
+		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 26.09.22 (пн) <img src="~/images/Times/expired.png" width="30px"/> 08:00</div>
+		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 27.09.22 (вт) <img src="~/images/Times/expired.png" width="30px"/> 18:40</div>
+	</div>
+
+	<div class="content">
+		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 28.09.22 (ср) <img src="~/images/Times/expired.png" width="30px"/> 17:55</div>
+		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 7.10.22 (пт) <img src="~/images/Times/expired.png" width="30px"/> 14:00</div>
+		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 8.10.22 (сб) <img src="~/images/Times/expired.png" width="30px"/> 11:20</div>
+		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 13.10.22 (чт) <img src="~/images/Times/expired.png" width="30px"/> 08:05</div>
+	</div>
+
+	<div class="content">
+		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 14.10.22 (пт) <img src="~/images/Times/expired.png" width="30px"/> 09:10</div>
+		<div class="item">-</div>
+		<div class="item">-</div>
+		<div class="item">-</div>
+	</div>
+</div>
+
+<div class="text1"><img src="~/images/Times/warning.png" width="30px"/>Для записи к специалисту, пожалуйста, приготовьте Снилс или полис ОМС</div>
+<div class="footer"><a class="text" href="/Doctor">Вернуться назад</a></div>
+
+		</div>
+	</body>
+</html>
