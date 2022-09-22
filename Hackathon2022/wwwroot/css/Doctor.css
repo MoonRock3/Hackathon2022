@@ -40,9 +40,10 @@ body{
     margin: 0%;
 }
 
-.content{
+.content {
     display: block;
-    
+    padding: 10px;
+    width: 400px;
 }
 
 .content1{
@@ -52,6 +53,25 @@ body{
     font-size: 25px;
 }
 
-.item{
-    padding: 30px 50px;
+.item {
+    padding: 10px 50px;
+}
+
+.color {
+    background-color: #0B95DD;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    height: 75px;
+    padding: 0px 20px;
+}
+
+    .color:hover {
+        background-color: #0B95BB;
+    }
+
+.speciality {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }

@@ -21,28 +21,38 @@
 
 <div class="content1">
 	<div class="content">
-		<div class="item">
-			<div class="color"><img src="~/images/Record.png" alt="врач"/>
-				<a href="/Doctor/1">Невролог</a>
-			</div>
-		</div>
-		@for (int i = 1; i < 4; i++)
+		@for (int i = 0; i < 4; i++)
 		{
-			<div class="item">@Model.Specialties[i].Name</div>
+			<div class="item">
+				<div class="color">
+					<img src="~/images/Record.png" alt="врач"/>
+					<a class="speciality" href="/Doctor/1">@Model.Specialties[i].Name</a>
+				</div>
+			</div>
 		}
 	</div>
 
 	<div class="content">
 		@for (int i = 4; i < 8; i++)
 		{
-			<div class="item">@Model.Specialties[i].Name</div>
+			<div class="item">
+				<div class="color">
+					<img src="~/images/Record.png" alt="врач"/>
+					<a class="speciality" href="/Doctor/1">@Model.Specialties[i].Name</a>
+				</div>
+			</div>
 		}
 	</div>
 
 	<div class="content">
 		@for (int i = 8; i < 12; i++)
 		{
-			<div class="item">@Model.Specialties[i].Name</div>
+			<div class="item">
+				<div class="color">
+					<img src="~/images/Record.png" alt="врач"/>
+					<a class="speciality" href="/Doctor/1">@Model.Specialties[i].Name</a>
+				</div>
+			</div>
 		}
 	</div>
 </div>
