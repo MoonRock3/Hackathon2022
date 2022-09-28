@@ -8,6 +8,9 @@
 
 		<link href="~/css/Times.css" rel="stylesheet" type="text/css">
 		
+		<script type="text/javascript" src="~/js/Times/jquery.js"></script>
+		<script src="~/js/Times/jquery.datetimepicker.full.js"></script>
+		<link rel="stylesheet" type="text/css" href="~/js/Times/jquery.datetimepicker.css"/>
 	</head>
 	<body>
 		<div class="container">
@@ -19,35 +22,27 @@
 	<h1>Выберите дату и время</h1>
 </div>
 
-<div class="content1">
-	<div class="content">
-		<div class="item">
-			<a href="/Ticket"> 
-				<img src="~/images/Times/calendar.png" width="30px"/> 
-				20.09.22 (вт) 
-				<img src="~/images/Times/expired.png" width="30px"/> 15:00
-			</a>
-			</div>
-		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 23.09.22 (пт) <img src="~/images/Times/expired.png" width="30px"/> 09:30</div>
-		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 26.09.22 (пн) <img src="~/images/Times/expired.png" width="30px"/> 08:00</div>
-		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 27.09.22 (вт) <img src="~/images/Times/expired.png" width="30px"/> 18:40</div>
-	</div>
 
-	<div class="content">
-		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 28.09.22 (ср) <img src="~/images/Times/expired.png" width="30px"/> 17:55</div>
-		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 7.10.22 (пт) <img src="~/images/Times/expired.png" width="30px"/> 14:00</div>
-		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 8.10.22 (сб) <img src="~/images/Times/expired.png" width="30px"/> 11:20</div>
-		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 13.10.22 (чт) <img src="~/images/Times/expired.png" width="30px"/> 08:05</div>
-	</div>
+<center>
+<input type="text" value="" id="datetimepicker" name="datetimepicker"/>
 
-	<div class="content">
-		<div class="item"><img src="~/images/Times/calendar.png" width="30px"/> 14.10.22 (пт) <img src="~/images/Times/expired.png" width="30px"/> 09:10</div>
-		<div class="item">-</div>
-		<div class="item">-</div>
-		<div class="item">-</div>
-	</div>
-</div>
+<script>
+	$.datetimepicker.setLocale('ru');
 
+	$('#datetimepicker').datetimepicker({
+	dayOfWeekStart : 1,
+	lang:'ru',
+	format:'d M Y H:i',
+	disabledDates:['2016/09/21','2016/09/29'],
+	startDate: 0,
+	step:30,
+	minDate:0,
+	allowTimes:['10:00', '11:00', '12:00', '13:00', '14:00','15:00'],
+	disabledWeekDays:[0,6]
+	});
+</script>
+<a class="text" href="/Ticket">Далее</a>
+</center>
 <div class="text1"><img src="~/images/Times/warning.png" width="30px"/>Для записи к специалисту, пожалуйста, приготовьте Снилс или полис ОМС</div>
 <div class="footer"><a class="text" href="/Doctor/1">Вернуться назад</a></div>
 
