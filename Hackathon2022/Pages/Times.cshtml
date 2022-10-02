@@ -25,27 +25,34 @@
 
 <center>
 <input type="text" value="" id="datetimepicker" name="datetimepicker"/>
-
-<script>
-	$.datetimepicker.setLocale('ru');
-
-	$('#datetimepicker').datetimepicker({
-	dayOfWeekStart : 1,
-	lang:'ru',
-	format:'d M Y H:i',
-	disabledDates:['2016/09/21','2016/09/29'],
-	startDate: 0,
-	step:30,
-	minDate:0,
-	allowTimes:['10:00', '11:00', '12:00', '13:00', '14:00','15:00'],
-	disabledWeekDays:[0,6]
-	});
-</script>
-<a class="text" href="/Ticket">Далее</a>
+<a id="okBtn" class="text">Далее</a>
 </center>
 <div class="text1"><img src="~/images/Times/warning.png" width="30px"/>Для записи к специалисту, пожалуйста, приготовьте Снилс или полис ОМС</div>
 <div class="footer"><a class="text" href="/Doctor/1">Вернуться назад</a></div>
 
 		</div>
+	<script>
+		$.datetimepicker.setLocale('ru');
+
+		$('#datetimepicker').datetimepicker({
+		dayOfWeekStart : 1,
+		lang:'ru',
+		format:'d M Y H:i',
+		disabledDates:['2016/09/21','2016/09/29'],
+		startDate: 0,
+		step:30,
+		minDate:0,
+		allowTimes:['10:00', '11:00', '12:00', '13:00', '14:00','15:00'],
+		disabledWeekDays:[0,6]
+		});
+		let okBtn = document.querySelector("#okBtn");
+		let dateInput = document.querySelector("#datetimepicker");
+		//okBtn.style.visibility='hidden';
+		okBtn.addEventListener("click", () => {
+			if (dateInput.value !== ""){
+				okBtn.href = "/Ticket/" + dateInput.value;
+			}
+		});
+	</script>
 	</body>
 </html>

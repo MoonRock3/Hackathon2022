@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{dateTime}"
 @model Hackathon2022.Pages.TicketModel
 @{
 }
@@ -16,13 +16,32 @@
 	<div class="headerText">Медицинская информационно-аналитическая система</div>
 </div>
 <div class="sidebar"> 
-	<h2>Для подтверждения записи к специалисту и выдачи талончика, пожалуйста, приложите штрих-код Снилса или полиса ОМС к считывателю</h2>
-	<h3><img src="~/images/Times/calendar.png" width="30px"/> Ваша дата: 20.09.22 (вт) и <img src="~/images/Times/expired.png" width="30px"/> время: 15:00</h3>
-	<img src="~/images/Ticket/1.png" width="600px"/></br>
+	<h2>Для подтверждения записи к специалисту и выдачи талончика, пожалуйста, приложите QR-код Снилса или полиса ОМС к считывателю</h2>
+	<h3><img src="~/images/Times/calendar.png" width="30px"/> Ваша дата: @Model.Date_Time[..Model.Date_Time.LastIndexOf(' ')] и 
+		<img src="~/images/Times/expired.png" width="30px"/> время: @Model.Date_Time[(Model.Date_Time.LastIndexOf(' ')+1)..]</h3>
+	<!--img src="~/images/Ticket/1.png" width="600px"/></br!-->
+	<video id="video" width="400" height="350" autoplay></video>
 	<div class="strelka"><img src="~/images/Ticket/2.png" width="100px"/></div>
 </div>
-<div class="footer"><a class="text" href="/Times">Вернуться назад</a></div>
+<div class="footer"><a class="text" href="/Index">Вернуться назад</a></div>
 
 		</div>
+	<script type="module">
+		import QrScanner from "../js/CreatedTicket/qr-scanner.min.js";
+		const video = document.querySelector("#video");
+		const scanner = new QrScanner(video, result => ProcessResult(result), {
+			highlightScanRegion: true,
+			highlightCodeOutline: true,
+		});
+		scanner.start();
+		function ProcessResult(result){
+			scanner.stop();
+			scanner.destroy();
+			//video.remove();
+			document.querySelector(".footer").remove();
+			document.querySelector(".sidebar").innerHTML="<h2>Выдача для документа №" + result.data + "<h2>";
+			setTimeout(_ => window.location.href = "/", 3000);
+		}
+	</script>
 	</body>
 </html>
